@@ -1,7 +1,6 @@
 import React from "react";
 
 import Header from "../../components/header";
-import Footer from "../../components/footer";
 import "./styles.css";
 
 function Marte() {
@@ -9,7 +8,6 @@ function Marte() {
     <div>
       <Header />
       <h1>Marte</h1>
-      <Footer />
     </div>
   );
 }

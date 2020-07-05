@@ -4,7 +4,6 @@ import "./styles.css";
 import get from "../../services/api";
 
 import Header from "../../components/header";
-import Footer from "../../components/footer";
 import Card from "./card";
 
 function Home() {
@@ -22,7 +21,6 @@ function Home() {
       {imgs.map((img) => {
         return <Card img={img} />;
       })}
-      <Footer />
     </div>
   );
 }
