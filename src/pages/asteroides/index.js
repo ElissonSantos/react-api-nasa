@@ -7,8 +7,10 @@ import apiGet from "../../services/api";
 import "./styles.css";
 // Components
 import Header from "../../components/header";
+import Loading from "../../components/loading";
 
 function Asteroides() {
+  const [isLoading, setLoading] = useState(true);
   const [asteroides, setAsteroides] = useState([]);
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [showDate, setShowDate] = useState(null);
@@ -22,7 +24,12 @@ function Asteroides() {
 
   useEffect(() => {
     showDate && searchAsteroids();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [showDate]);
+
+  useEffect(() => {
+    asteroides.length ? setLoading(false) : setLoading(true);
+  }, [asteroides]);
 
   const searchAsteroids = async () => {
     setAsteroides([]);
@@ -50,47 +57,48 @@ function Asteroides() {
           />
         </div>
         <div className="title-area">
-          <h3>
-            Lista de Asteroides mais proximos a Terra neste dia.
-            {selectedDate.format}
-          </h3>
+          <h3>Lista de Asteroides mais proximos a Terra neste dia.</h3>
         </div>
       </div>
 
-      <div className="card-list">
-        {asteroides.map((infos) => (
-          <div className="card">
-            <div className="info">
-              Nome: <h3 className="title">{infos.name}</h3>
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <div className="card-list">
+          {asteroides.map((infos) => (
+            <div key={infos.id} className="card">
+              <div className="info">
+                Nome: <h3 className="title">{infos.name}</h3>
+              </div>
+              <div className="info">
+                Diametro Maximo:
+                <h4>
+                  {Math.round(
+                    infos.estimated_diameter.meters.estimated_diameter_max
+                  ) + " Metros"}
+                </h4>
+              </div>
+              <div className="info">
+                Diametro Minimo:
+                <h4>
+                  {Math.round(
+                    infos.estimated_diameter.meters.estimated_diameter_min
+                  ) + " Metros"}
+                </h4>
+              </div>
+              <div className="info">
+                Velocidade relativa:
+                <h4>
+                  {Math.round(
+                    infos.close_approach_data[0].relative_velocity
+                      .kilometers_per_hour
+                  ) + " Km/h"}
+                </h4>
+              </div>
             </div>
-            <div className="info">
-              Diametro Maximo:
-              <h4>
-                {Math.round(
-                  infos.estimated_diameter.meters.estimated_diameter_max
-                ) + " Metros"}
-              </h4>
-            </div>
-            <div className="info">
-              Diametro Minimo:
-              <h4>
-                {Math.round(
-                  infos.estimated_diameter.meters.estimated_diameter_min
-                ) + " Metros"}
-              </h4>
-            </div>
-            <div className="info">
-              Diametro Minimo:
-              <h4>
-                {Math.round(
-                  infos.close_approach_data[0].relative_velocity
-                    .kilometers_per_hour
-                ) + " Km/h"}
-              </h4>
-            </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

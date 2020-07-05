@@ -9,16 +9,20 @@ function Header() {
     <div className="header">
       <img src={Logo} alt="NASA" className="logo" />
 
-      <Link to={`/`}>
+      <Link className="link" to={`/`}>
         <h3>Inicio</h3>
       </Link>
 
-      <Link to={`/asteroides`}>
+      <Link className="link" to={`/asteroides`}>
         <h3>Asteroides</h3>
       </Link>
 
-      <Link to={`/marte`}>
+      <Link className="link" to={`/marte`}>
         <h3>Marte</h3>
+      </Link>
+
+      <Link className="link" to={`/projetos`}>
+        <h3>Projetos</h3>
       </Link>
     </div>
   );

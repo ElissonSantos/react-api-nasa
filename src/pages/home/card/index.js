@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 
 import "./styles.css";
 import background from "../../../assets/background.jpg";
@@ -24,6 +23,7 @@ function Card(props) {
         const as = data.config.url;
         setImg(as.text);
       });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
