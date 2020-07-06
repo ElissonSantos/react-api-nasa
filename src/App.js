@@ -4,7 +4,6 @@ import "./styles.css";
 
 import Routes from "./routes";
 import apiGet from "./services/api";
-import Footer from "./components/footer";
 
 function App() {
   const [img, setImg] = useState("");
@@ -32,7 +31,7 @@ function App() {
 
   return (
     <div style={background} className="App">
-      <small className="left">
+      <small>
         {title}
         <br />
         {copyright}
@@ -40,7 +39,6 @@ function App() {
 
       <div className="sobApp">
         <Routes />
-        <Footer />
       </div>
     </div>
   );

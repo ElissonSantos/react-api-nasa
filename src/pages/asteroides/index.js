@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 // API
 import apiGet from "../../services/api";
 // Style
 import "./styles.css";
 // Components
-import Header from "../../components/header";
 import Loading from "../../components/loading";
+import { Link } from "react-router-dom";
 
 function Asteroides() {
   const [isLoading, setLoading] = useState(true);
@@ -43,20 +44,18 @@ function Asteroides() {
 
   return (
     <div className="size">
-      <Header />
-
       <div className="card-primary">
-        <div className="date-area">
+        <div className="card-primary-date">
           <p>Selecione o dia:</p>
           <DatePicker
             selected={selectedDate}
             onChange={(date) => setSelectedDate(date)}
             maxDate={new Date()}
             dateFormat="dd/MM/yyyy"
-            className="datepicker"
+            className="date-datepicker"
           />
         </div>
-        <div className="title-area">
+        <div className="card-primary-title">
           <h3>Lista de Asteroides mais proximos a Terra neste dia.</h3>
         </div>
       </div>
@@ -67,33 +66,46 @@ function Asteroides() {
         <div className="card-list">
           {asteroides.map((infos) => (
             <div key={infos.id} className="card">
-              <div className="info">
-                Nome: <h3 className="title">{infos.name}</h3>
+              <div className="card-info">
+                <p className="info-name">Nome:</p>
+                <p className="info-value">{infos.name}</p>
               </div>
+
               <div className="info">
-                Diametro Maximo:
-                <h4>
+                <p className="info-name">Diametro Maximo:</p>
+                <p className="info-value">
                   {Math.round(
                     infos.estimated_diameter.meters.estimated_diameter_max
-                  ) + " Metros"}
-                </h4>
+                  )}
+                  Metros
+                </p>
               </div>
+
               <div className="info">
-                Diametro Minimo:
-                <h4>
+                <p className="info-name">Diametro Minimo:</p>
+                <p className="info-value">
                   {Math.round(
                     infos.estimated_diameter.meters.estimated_diameter_min
-                  ) + " Metros"}
-                </h4>
+                  )}
+                  Metros
+                </p>
               </div>
+
               <div className="info">
-                Velocidade relativa:
-                <h4>
+                <p className="info-name">Velocidade relativa:</p>
+                <p className="info-value">
                   {Math.round(
                     infos.close_approach_data[0].relative_velocity
                       .kilometers_per_hour
-                  ) + " Km/h"}
-                </h4>
+                  )}
+                  Km/h
+                </p>
+              </div>
+
+              <div className="info-options">
+                <Link to={`asteroides/${infos.id}`}>
+                  <FontAwesomeIcon icon={faSearch} className="options-see" />
+                </Link>
               </div>
             </div>
           ))}

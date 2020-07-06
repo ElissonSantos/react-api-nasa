@@ -1,26 +1,32 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 import "./styles.css";
 
-function Header() {
+function Footer() {
   return (
     <div className="footer">
       <div className="center">
         <div className="nasa">
+          <p className="primary">NASA</p>
           <p className="primary">Open Innovation Team</p>
-          <a href="https://www.nasa.gov/about/highlights/HP_Privacy.html">
-            Privacy
+          <a href="https://twitter.com/opennasa?lang=en" target="_blank">
+            <FontAwesomeIcon icon={faTwitter} className="faGithubSquare" />
           </a>
-          <a href="https://www.nasa.gov/FOIA/index.html">FOIA</a>
-          <a href="benjamin.reist@nasa.gov">NASA Official: Benjamin Reist</a>
+          <a href="https://github.com/nasa" target="_blank">
+            <FontAwesomeIcon icon={faGithub} className="faGithubSquare" />
+          </a>
         </div>
         <div className="personal">
           <p className="primary">Elisson Santos</p>
-          <a href="https://github.com/ElissonSantos">GitHub</a>
+          <a href="https://github.com/ElissonSantos" target="_blank">
+            <FontAwesomeIcon icon={faGithub} className="faGithubSquare" />
+          </a>
         </div>
       </div>
     </div>
   );
 }
 
-export default Header;
+export default Footer;

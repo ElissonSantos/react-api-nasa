@@ -1,7 +1,5 @@
 .footer {
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  flex-grow: 0;
   background-color: #858585;
   display: flex;
   justify-content: center;
@@ -20,11 +18,17 @@
 .footer .nasa,
 .personal {
   flex: 1;
-  margin: 30px 60px 30px 60px;
+  margin: 0px 40px 0px 40px;
   text-align: center;
 }
 
 .primary {
   font-weight: bold;
   color: #131313;
+}
+
+.faGithubSquare {
+  margin: 5px;
+  font-size: xx-large;
+  color: #000000;
 }

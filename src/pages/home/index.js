@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import "./styles.css";
 import get from "../../services/api";
 
-import Header from "../../components/header";
 import Card from "./card";
 
 function Home() {
@@ -17,7 +16,6 @@ function Home() {
 
   return (
     <div className="home">
-      <Header />
       {imgs.map((img) => {
         return <Card img={img} />;
       })}

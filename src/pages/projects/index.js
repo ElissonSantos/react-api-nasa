@@ -6,7 +6,6 @@ import apiGet from "../../services/api";
 // Style
 import "./styles.css";
 // Components
-import Header from "../../components/header";
 
 function Projetos() {
   const [projetos, setProjetos] = useState({});
@@ -31,8 +30,6 @@ function Projetos() {
 
   return (
     <div className="size">
-      <Header />
-
       <div className="card-primary">
         <div className="title-area">
           <h3>Pesquisar:</h3>
