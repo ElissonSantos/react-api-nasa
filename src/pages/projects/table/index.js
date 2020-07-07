@@ -3,72 +3,51 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { Table } from "antd";
+import "antd/dist/antd.css";
 // Style
 import "./styles.css";
 // Components
 
-function Table({ data }) {
-  console.log(data);
-  // const projetos = data.map((projeto) => {
-  //   const see = (
-  //     <Link to={`projetos/${projeto.id}`}>
-  //       <FontAwesomeIcon icon={faSearch} />
-  //     </Link>
-  //   );
-  //   let addOption = {
-  //     ...projeto,
-  //     see,
-  //   };
-  //   return addOption;
-  // });
-  // const columns = [
-  //   { dataField: "title", text: "Titulo", style: { textAlign: "center" } },
-  //   {
-  //     dataField: "status",
-  //     text: "Status",
-  //     style: { textAlign: "center" },
-  //   },
-  //   {
-  //     dataField: "see",
-  //     text: "Visualizar",
-  //     style: { textAlign: "center" },
-  //   },
-  // ];
-
-  const dataSource = [
-    {
-      key: "1",
-      name: "Mike",
-      age: 32,
-      address: "10 Downing Street",
-    },
-    {
-      key: "2",
-      name: "John",
-      age: 42,
-      address: "10 Downing Street",
-    },
-  ];
+function TableProjects({ data }) {
+  const projetos = data.map((projeto) => {
+    const see = (
+      <Link to={`projetos/${projeto.id}`}>
+        <FontAwesomeIcon icon={faSearch} />
+      </Link>
+    );
+    let addOption = {
+      ...projeto,
+      key: projeto.id,
+      see,
+    };
+    return addOption;
+  });
 
   const columns = [
     {
-      title: "Name",
-      dataIndex: "name",
-      key: "name",
+      title: "Titulo",
+      dataIndex: "title",
+      sorter: (a, b) => a.title.length - b.title.length,
+      sortDirections: ["descend", "ascend"],
     },
     {
-      title: "Age",
-      dataIndex: "age",
-      key: "age",
+      title: "Status",
+      dataIndex: "status",
+      sorter: (a, b) => a.status.length - b.status.length,
+      sortDirections: ["descend", "ascend"],
     },
     {
-      title: "Address",
-      dataIndex: "address",
-      key: "address",
+      title: "Visualizar",
+      dataIndex: "see",
+      sorter: (a, b) => a.see.length - b.see.length,
+      sortDirections: ["descend", "ascend"],
     },
   ];
 
-  return <Table dataSource={dataSource} columns={columns} />;
+  return (
+    <Table dataSource={projetos} columns={columns} style={{ width: "100%" }} />
+  );
 }
 
-export default Table;
+export default TableProjects;

@@ -33,7 +33,6 @@ function Projects() {
   }, [textSearch]);
 
   useEffect(() => {
-    console.log(showDate);
     showDate && searchIds();
   }, [showDate]);
 

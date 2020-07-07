@@ -50,6 +50,7 @@
   background-color: #ffffff;
   border-radius: 5px;
   padding: 20px;
+  width: 100%;
 }
 
 .table-projects {
@@ -67,74 +68,3 @@ th {
 .table-projects tr:nth-child(even) {
   background-color: #dddddd;
 }
-/* 
-
-.card-primary {
-  background-color: #ffffff;
-  width: 100%;
-  border-radius: 5px;
-  margin: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.card-primary-search {
-  flex-grow: 2;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 15px;
-  border-right: 3px solid #000000;
-}
-
-.input-project {
-  width: 100%;
-  padding: 5px;
-  margin: 10px;
-}
-
-.project-date {
-  flex-grow: 2;
-  text-align: center;
-  padding: 15px;
-}
-
-.date-text {
-  padding-bottom: 5px;
-  font-weight: bold;
-}
-
-.date-datepicker {
-  padding: 3px;
-  background-color: #e7e7e7;
-  border: 1px solid #000000;
-  font-size: medium;
-  text-align: center;
-  font-weight: bold;
-}
-
-.card-table {
-  background-color: #ffffff;
-  border-radius: 5px;
-  padding: 20px;
-}
-
-.table-projects {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-}
-
-.table-projects td,
-th {
-  border: 2px solid #bbbaba;
-  text-align: center;
-  padding: 10px;
-}
-
-.table-projects tr:nth-child(even) {
-  background-color: #dddddd;
-} */

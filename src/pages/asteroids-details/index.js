@@ -142,7 +142,7 @@ function AsteroidDetails() {
 
               <div className="asteroid">
                 <a
-                  href="http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=3263453"
+                  href={`http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=${asteroid.id}`}
                   target="_blank"
                   className="asteroid-link"
                 >
