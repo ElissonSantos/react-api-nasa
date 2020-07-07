@@ -48,7 +48,7 @@ function Asteroids() {
     <div className="size">
       <div className="card-primary">
         <div className="card-primary-date">
-          <p>Selecione o dia:</p>
+          <p className="date-text">Selecione o dia:</p>
           <DatePicker
             disabledDate={(d) => !d || d.isAfter(new Date())}
             defaultValue={moment(selectedDate, "DD/MM/YYYY")}

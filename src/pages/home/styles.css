@@ -1,7 +1,8 @@
-.home {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+.card-not-post {
+  text-align: center;
+  background-color: #ffffff;
+  width: 60%;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 30px;
 }

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import "./styles.css";
 
+import { loadInit } from "./services/api-posts";
 import Routes from "./routes";
 import apiGet from "./services/api";
 
@@ -28,6 +29,8 @@ function App() {
       }
     );
   }, []);
+
+  loadInit();
 
   return (
     <div style={background} className="App">

@@ -1,0 +1,14 @@
+.card-post {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.img-post {
+  height: 250px;
+}

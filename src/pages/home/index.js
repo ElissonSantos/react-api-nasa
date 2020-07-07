@@ -1,24 +1,42 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import "./styles.css";
-import get from "../../services/api";
 
-import Card from "./card";
+import CardPost from "./card-post";
+import { getAllPosts } from "../../services/api-posts";
+import Loading from "../../components/loading";
 
 function Home() {
-  const [imgs, setimgs] = useState([]);
+  const [isLoading, setLoading] = useState(true);
+  const [posts, setPosts] = useState();
 
   useEffect(() => {
-    get("EPIC/api/natural/images").then(async (data) => {
-      setimgs(data.data);
-    });
+    loadPosts();
   }, []);
 
+  const loadPosts = async () => {
+    const postsData = await getAllPosts();
+    setPosts(postsData);
+    setLoading(false);
+  };
+
   return (
-    <div className="home">
-      {imgs.map((img) => {
-        return <Card img={img} />;
-      })}
+    <div className="size">
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <div>
+          {posts ? (
+            posts.map((post) => {
+              return <CardPost post={post} />;
+            })
+          ) : (
+            <div className="card-not-post">
+              <h1>Não há nenhum post cadastrado</h1>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }
