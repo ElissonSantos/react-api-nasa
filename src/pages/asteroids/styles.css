@@ -39,6 +39,7 @@
   background-color: #ffffff;
   width: 40%;
   border-radius: 5px;
+  margin: 20px;
   padding: 20px;
 }
 
@@ -62,11 +63,6 @@
   cursor: pointer;
 }
 
-.info {
-  justify-content: center;
-  align-items: center;
-}
-
 .info-name {
   text-align: end;
   font-size: small;
@@ -74,9 +70,7 @@
 }
 
 .info-value {
-  margin: 10px;
-  width: 60%;
-  text-align: center;
+  width: 65%;
   font-weight: bold;
   font-size: large;
 }

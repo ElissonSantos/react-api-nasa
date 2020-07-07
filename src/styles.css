@@ -48,69 +48,6 @@ body {
   justify-content: center;
 }
 
-.card-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-
-.link {
-  text-decoration: unset;
-}
-
-
-/* * {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  margin: 0;
-  padding: 0;
-  flex-direction: column;
-}
-
-.App {
-  min-height: 100vh;
-  width: 100%;
-  background-position: top;
-  background-size: cover;
-  position: absolute;
-  z-index: 0;
-}
-
-.App small {
-  color: #818181;
-  position: absolute;
-  z-index: 0;
-}
-
-.sobApp {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  width: 100%;
-  background-color: rgb(0, 0, 0, 0.8);
-  z-index: 1;
-}
-
-.size {
-  padding: 50px 200px 50px 200px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 .link {
   text-decoration: none;
 }
@@ -121,4 +58,4 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-} */
+}

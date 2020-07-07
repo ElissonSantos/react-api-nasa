@@ -83,7 +83,7 @@ function Projects() {
           />
         </div>
         <div className="project-date">
-          <p>Ultima atualização no Projeto:</p>
+          <p className="date-text">Ultima atualização no Projeto:</p>
           <DatePicker
             disabledDate={(d) => !d || d.isAfter(new Date())}
             defaultValue={moment(selectedDate, "DD/MM/YYYY")}

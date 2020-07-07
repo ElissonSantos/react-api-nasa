@@ -62,6 +62,7 @@ function AsteroidDetails() {
 
               <div className="asteroid-tamanho">
                 <p className="asteroid-name-size">Tamanho estimado em:</p>
+                
                 <div className="asteroid">
                   <p className="asteroid-diameter">Máximo:</p>
                   <p className="asteroid-name">Pés:</p>

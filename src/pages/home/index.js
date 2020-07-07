@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import "./styles.css";
 
@@ -9,6 +10,7 @@ import Loading from "../../components/loading";
 function Home() {
   const [isLoading, setLoading] = useState(true);
   const [posts, setPosts] = useState();
+  const [noPost, setNoPosts] = useState(true);
 
   useEffect(() => {
     loadPosts();
@@ -16,25 +18,28 @@ function Home() {
 
   const loadPosts = async () => {
     const postsData = await getAllPosts();
+    postsData.length === 0 ? setNoPosts(true) : setNoPosts(false);
     setPosts(postsData);
     setLoading(false);
   };
 
   return (
     <div className="size">
+      <div className="home-button">
+        <h2 className="destak">
+          {noPost ? "Não há nenhum post cadastrado" : "Veja alguns destaques."}
+        </h2>
+        <Link to="newpost">
+          <p className="new-post">Nova Postagem</p>
+        </Link>
+      </div>
       {isLoading ? (
         <Loading />
       ) : (
         <div>
-          {posts ? (
-            posts.map((post) => {
-              return <CardPost post={post} />;
-            })
-          ) : (
-            <div className="card-not-post">
-              <h1>Não há nenhum post cadastrado</h1>
-            </div>
-          )}
+          {posts.map((post) => {
+            return <CardPost key={post.id} post={post} loadPosts={loadPosts} />;
+          })}
         </div>
       )}
     </div>

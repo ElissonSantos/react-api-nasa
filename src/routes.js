@@ -18,7 +18,8 @@ const Routes = () => {
       <Header />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/editpost" component={EditPost} />
+        <Route exact path="/editpost/:id" component={EditPost} />
+        <Route exact path="/newpost" component={EditPost} />
         <Route exact path="/asteroides" component={Asteroids} />
         <Route exact path="/asteroides/:id" component={AsteroidsDetails} />
         <Route exact path="/marte" component={Mars} />

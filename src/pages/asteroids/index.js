@@ -72,7 +72,7 @@ function Asteroids() {
                 <p className="info-value">{infos.name}</p>
               </div>
 
-              <div className="info">
+              <div className="card-info">
                 <p className="info-name">Diametro Maximo:</p>
                 <p className="info-value">
                   {Math.round(
@@ -82,7 +82,7 @@ function Asteroids() {
                 </p>
               </div>
 
-              <div className="info">
+              <div className="card-info">
                 <p className="info-name">Diametro Minimo:</p>
                 <p className="info-value">
                   {Math.round(
@@ -92,7 +92,7 @@ function Asteroids() {
                 </p>
               </div>
 
-              <div className="info">
+              <div className="card-info">
                 <p className="info-name">Velocidade relativa:</p>
                 <p className="info-value">
                   {Math.round(

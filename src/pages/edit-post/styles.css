@@ -1,7 +1,67 @@
-.home {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.card-edit-post {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.input-area {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+
+.input-title {
+  width: 10%;
+  text-align: end;
+  margin-right: 10px;
+}
+
+.input {
+  padding: 8px;
+  width: 85%;
+}
+
+.edit-post-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.btn {
+  float: left;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  margin: 5px;
+  padding: 8px;
+}
+
+.btn-cancel {
+  background: #d41121;
+  border-bottom: 3px solid #e82e3e;
+  -webkit-box-shadow: inset 0 -3px #e21829;
+  box-shadow: inset 0 -3px #e82e3e;
+  margin-right: 20px;
+}
+
+.btn-save {
+  background: #183b9b;
+  border-bottom: 3px solid #3c6c98;
+  -webkit-box-shadow: inset 0 -3px #3c7398;
+  box-shadow: inset 0 -3px #3c6c98;
+}
+
+.cancel,
+.save {
+  color: #fff;
+  margin-right: 5px;
+}
+
+.error-save {
+  color: #ff0000;
 }

@@ -12,3 +12,19 @@
 .img-post {
   height: 250px;
 }
+
+.post-options {
+  text-align: end;
+}
+
+.trash-post {
+  font-size: x-large;
+  color: #c20000;
+  margin: 10px;
+}
+
+.edit-post {
+  font-size: x-large;
+  color: #0d00c2;
+  margin: 10px;
+}

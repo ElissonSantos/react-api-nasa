@@ -1,33 +1,33 @@
 import React, { useState } from "react";
-// Styles
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
+
 import "./styles.css";
+
+import { deletePost } from "../../../services/api-posts";
 
 function CardPost(props) {
   const [post, setPost] = useState(props.post);
 
-  // useEffect(() => {
-  //   const today = new Date(props.img.date);
-  //   setToday(String(today));
-  //   const day = String(today.getDate()).padStart(2, "0");
-  //   const month = String(today.getMonth() + 1).padStart(2, "0");
-  //   const year = today.getFullYear();
-  //   axios
-  //     .get(
-  //       `https://api.nasa.gov/EPIC/archive/natural/${year}/${month}/${day}/png/${props.img.image}.png`,
-  //       { params: { api_key: "3c0aDGuxR3r5xcVYQVZFnW4zKG9oETvx9ogQ1YR7" } }
-  //     )
-  //     .then((data) => {
-  //       const as = data.config.url;
-  //       setImg(as.text);
-  //     });
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, []);
+  const handleDelete = () => {
+    deletePost(post.id);
+    props.loadPosts();
+  };
 
   return (
     <div className="card-post">
       <img className="img-post" src={post.img} alt={post.title} />
       <h1 className="title-post">{post.title}</h1>
       <p className="body-post">{post.body}</p>
+      <div className="post-options">
+        <Link to="" onClick={handleDelete}>
+          <FontAwesomeIcon icon={faTrash} className="trash-post" />
+        </Link>
+        <Link to={`editpost/${post.id}`}>
+          <FontAwesomeIcon icon={faEdit} className="edit-post" />
+        </Link>
+      </div>
     </div>
   );
 }

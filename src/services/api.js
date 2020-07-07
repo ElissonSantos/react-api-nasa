@@ -4,6 +4,7 @@ const api = axios.create({
   baseURL: "https://api.nasa.gov/",
 });
 
+// Metodo Get
 const apiGet = async (url, urlParams = {}) => {
   let params = { api_key: "3c0aDGuxR3r5xcVYQVZFnW4zKG9oETvx9ogQ1YR7" };
 

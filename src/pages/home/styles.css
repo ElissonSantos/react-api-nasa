@@ -6,3 +6,29 @@
   padding: 20px;
   margin: 30px;
 }
+
+.home-button {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.destak {
+  padding: 10px;
+  margin: 0px 30px 0px 30px;
+  color: #000000;
+  font-weight: bold;
+}
+
+.new-post {
+  margin: 0px 30px 0px 30px;
+  background-color: #dfdbdb;
+  border-radius: 5px;
+  padding: 10px;
+  color: #062d68;
+  font-weight: bold;
+}

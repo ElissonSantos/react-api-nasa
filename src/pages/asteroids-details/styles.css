@@ -38,7 +38,7 @@
 .asteroid-name {
   text-align: end;
   font-size: large;
-  width: 30%;
+  width: 35%;
 }
 
 .asteroid-name-size {
@@ -52,27 +52,29 @@
   margin-right: 30px;
   font-weight: bold;
   font-size: large;
+  justify-content: center;
+  align-items: center;
   width: 25%;
 }
 
 .asteroid-value {
-  margin: 10px;
-  width: 75%;
+  margin-left: 10px;
+  width: 65%;
   text-align: left;
   font-weight: bold;
   font-size: x-large;
 }
 
 .asteroid-size {
-  margin: 10px 40px 10px 10px;
-  width: 75%;
+  margin-left: 5px;
+  margin-right: 40px;
   text-align: left;
   font-weight: bold;
   font-size: large;
 }
 
 .danger {
-  margin: 10px;
+  margin-left: 10px;
   color: #fa0000;
   width: 75%;
   text-align: left;
@@ -81,7 +83,7 @@
 }
 
 .no-danger {
-  margin: 10px;
+  margin-left: 10px;
   color: #0b8600;
   width: 75%;
   text-align: left;
@@ -99,106 +101,3 @@
 .asteroid-not-found {
   text-align: center;
 }
-
-
-/* .asteroid-card {
-  background-color: #ffffff;
-  width: 100%;
-  border-radius: 5px;
-  padding: 20px;
-}
-
-.asteroid {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.asteroid-tamanho {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.asteroid-options {
-  display: flex;
-  flex-direction: row;
-  margin-top: 10px;
-  margin-right: 20px;
-  justify-content: flex-end;
-}
-
-.options-back {
-  color: #000000;
-  font-size: x-large;
-  cursor: pointer;
-}
-
-.asteroid-name {
-  text-align: end;
-  font-size: large;
-  width: 30%;
-}
-
-.asteroid-name-size {
-  text-align: center;
-  font-size: large;
-  width: 100%;
-}
-
-.asteroid-diameter {
-  text-align: end;
-  margin-right: 30px;
-  font-weight: bold;
-  font-size: large;
-  width: 25%;
-}
-
-.asteroid-value {
-  margin: 10px;
-  width: 75%;
-  text-align: left;
-  font-weight: bold;
-  font-size: x-large;
-}
-
-.asteroid-size {
-  margin: 10px 40px 10px 10px;
-  width: 75%;
-  text-align: left;
-  font-weight: bold;
-  font-size: large;
-}
-
-.danger {
-  margin: 10px;
-  color: #fa0000;
-  width: 75%;
-  text-align: left;
-  font-weight: bold;
-  font-size: x-large;
-}
-
-.no-danger {
-  margin: 10px;
-  color: #0b8600;
-  width: 75%;
-  text-align: left;
-  font-weight: bold;
-  font-size: x-large;
-}
-
-.asteroid-link {
-  margin-top: 10px;
-  text-decoration: none;
-  color: #ad0000;
-  font-size: large;
-}
-
-.asteroid-not-found {
-  text-align: center;
-} */
