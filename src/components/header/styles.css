@@ -6,12 +6,12 @@
   align-items: center;
 }
 
-.header .logo {
+.logo {
   margin: 20px;
   height: 120px;
 }
 
-.header h3 {
+.menu-option {
   color: #ffffff;
   padding: 10px 20px 10px 20px;
   border-left: 2px solid #ffffff;

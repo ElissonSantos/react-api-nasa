@@ -1,0 +1,9 @@
+.mars-frame {
+  display: flex;
+  min-height: 80vh;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 20px;
+}
+

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Col } from "antd";
 
 import "./styles.css";
 
@@ -25,14 +26,18 @@ function Home() {
 
   return (
     <div className="size">
-      <div className="home-button">
-        <h2 className="destak">
-          {noPost ? "Não há nenhum post cadastrado" : "Veja alguns destaques."}
-        </h2>
-        <Link to="newpost">
-          <p className="new-post">Nova Postagem</p>
-        </Link>
-      </div>
+      <Col xs={22} md={20} lg={18}>
+        <div className="home-button">
+          <h2 className="destak">
+            {noPost
+              ? "Não há nenhum post cadastrado"
+              : "Veja alguns destaques."}
+          </h2>
+          <Link to="newpost">
+            <p className="new-post">Nova Postagem</p>
+          </Link>
+        </div>
+      </Col>
       {isLoading ? (
         <Loading />
       ) : (

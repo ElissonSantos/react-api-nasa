@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -6,6 +7,7 @@ import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
 import "./styles.css";
 
 import { deletePost } from "../../../services/api-posts";
+import { Col } from "antd";
 
 function CardPost(props) {
   const [post, setPost] = useState(props.post);
@@ -16,7 +18,7 @@ function CardPost(props) {
   };
 
   return (
-    <div className="card-post">
+    <Col className="card-post" xs={24} md={24} lg={24}>
       <img className="img-post" src={post.img} alt={post.title} />
       <h1 className="title-post">{post.title}</h1>
       <p className="body-post">{post.body}</p>
@@ -28,7 +30,7 @@ function CardPost(props) {
           <FontAwesomeIcon icon={faEdit} className="edit-post" />
         </Link>
       </div>
-    </div>
+    </Col>
   );
 }
 

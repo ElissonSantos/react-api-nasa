@@ -1,6 +1,5 @@
 .asteroid-card {
   background-color: #ffffff;
-  width: 100%;
   border-radius: 5px;
   padding: 20px;
 }
@@ -38,13 +37,11 @@
 .asteroid-name {
   text-align: end;
   font-size: large;
-  width: 35%;
 }
 
 .asteroid-name-size {
   text-align: center;
   font-size: large;
-  width: 100%;
 }
 
 .asteroid-diameter {
@@ -54,12 +51,10 @@
   font-size: large;
   justify-content: center;
   align-items: center;
-  width: 25%;
 }
 
 .asteroid-value {
   margin-left: 10px;
-  width: 65%;
   text-align: left;
   font-weight: bold;
   font-size: x-large;
@@ -76,7 +71,6 @@
 .danger {
   margin-left: 10px;
   color: #fa0000;
-  width: 75%;
   text-align: left;
   font-weight: bold;
   font-size: x-large;
@@ -85,7 +79,6 @@
 .no-danger {
   margin-left: 10px;
   color: #0b8600;
-  width: 75%;
   text-align: left;
   font-weight: bold;
   font-size: x-large;

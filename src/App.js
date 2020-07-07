@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { Col, Row } from "antd";
 
 import "./styles.css";
 
 import { loadInit } from "./services/api-posts";
+
 import Routes from "./routes";
 import apiGet from "./services/api";
 
@@ -33,17 +35,21 @@ function App() {
   loadInit();
 
   return (
-    <div style={background} className="App">
-      <small>
-        {title}
-        <br />
-        {copyright}
-      </small>
+    <Row>
+      <Col span={24}>
+        <div style={background} className="App">
+          <small>
+            {title}
+            <br />
+            {copyright}
+          </small>
 
-      <div className="sobApp">
-        <Routes />
-      </div>
-    </div>
+          <div className="sobApp">
+            <Routes />
+          </div>
+        </div>
+      </Col>
+    </Row>
   );
 }
 
