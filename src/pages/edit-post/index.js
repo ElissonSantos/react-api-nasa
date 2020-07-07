@@ -61,6 +61,7 @@ function EditPost() {
             <div className="input-area">
               <p className="input-title">Titulo:</p>
               <input
+                placeholder="Título da publicação."
                 className="input"
                 value={title}
                 onChange={(value) => setTitle(value.target.value)}
@@ -69,6 +70,7 @@ function EditPost() {
             <div className="input-area">
               <p className="input-title">Corpo:</p>
               <textarea
+                placeholder="Digite aqui o conteúdo da publicação."
                 rows="5"
                 className="input"
                 value={body}
@@ -78,6 +80,7 @@ function EditPost() {
             <div className="input-area">
               <p className="input-title">Imagem:</p>
               <input
+                placeholder="URL da imagem da publicação."
                 className="input"
                 value={img}
                 onChange={(value) => setImg(value.target.value)}
