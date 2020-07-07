@@ -2,9 +2,9 @@ import React from "react";
 
 import "./styles.css";
 
-function Marte() {
+function Mars() {
   return (
-    <div>
+    <div className="size">
       <iframe
         title="Marte"
         src="https://mars.nasa.gov/layout/embed/image/insightweather/"
@@ -17,4 +17,4 @@ function Marte() {
   );
 }
 
-export default Marte;
+export default Mars;

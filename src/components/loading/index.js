@@ -6,7 +6,7 @@ function Loading() {
   return (
     <div className="center">
       <div className="spinner" />
-      <h2 className="carregando">Carregando</h2>
+      <h2 className="loading">Carregando</h2>
     </div>
   );
 }

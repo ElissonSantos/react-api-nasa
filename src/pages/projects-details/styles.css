@@ -1,19 +1,20 @@
-.asteroide-card {
+/* .project-card {
   background-color: #ffffff;
   width: 100%;
   border-radius: 5px;
   padding: 20px;
 }
 
-.asteroide {
+.project {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin: 10px;
 }
 
-.asteroide-tamanho {
+.project-tamanho {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,7 +22,7 @@
   text-align: center;
 }
 
-.asteroide-options {
+.project-options {
   display: flex;
   flex-direction: row;
   margin-top: 10px;
@@ -35,19 +36,18 @@
   cursor: pointer;
 }
 
-.asteroide-name {
+.project-name {
   text-align: end;
   font-size: large;
-  width: 30%;
 }
 
-.asteroide-name-size {
+.project-name-size {
   text-align: center;
   font-size: large;
   width: 100%;
 }
 
-.asteroide-diameter {
+.project-diameter {
   text-align: end;
   margin-right: 30px;
   font-weight: bold;
@@ -55,47 +55,18 @@
   width: 25%;
 }
 
-.asteroide-value {
-  margin: 10px;
-  width: 75%;
+.project-value {
   text-align: left;
   font-weight: bold;
   font-size: x-large;
 }
 
-.asteroide-size {
-  margin: 10px 40px 10px 10px;
-  width: 75%;
-  text-align: left;
-  font-weight: bold;
-  font-size: large;
-}
-
-.perigoso {
-  margin: 10px;
-  color: #fa0000;
-  width: 75%;
-  text-align: left;
-  font-weight: bold;
-  font-size: x-large;
-}
-
-.sem-perigo {
-  margin: 10px;
-  color: #0b8600;
-  width: 75%;
-  text-align: left;
-  font-weight: bold;
-  font-size: x-large;
-}
-
-.asteroide-link {
-  margin-top: 10px;
-  text-decoration: none;
-  color: #ad0000;
-  font-size: large;
-}
-
-.asteroide-not-found {
+.project-not-found {
   text-align: center;
 }
+
+.project-many {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+} */

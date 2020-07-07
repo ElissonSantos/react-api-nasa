@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from "react";
-import DatePicker from "react-datepicker";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { DatePicker } from "antd";
+import moment from "moment";
+import "antd/dist/antd.css";
 // API
 import apiGet from "../../services/api";
 // Style
 import "./styles.css";
 // Components
 import Loading from "../../components/loading";
-import { Link } from "react-router-dom";
 
-function Asteroides() {
+function Asteroids() {
   const [isLoading, setLoading] = useState(true);
-  const [asteroides, setAsteroides] = useState([]);
+  const [asteroids, setAsteroids] = useState([]);
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [showDate, setShowDate] = useState(null);
 
@@ -29,16 +31,16 @@ function Asteroides() {
   }, [showDate]);
 
   useEffect(() => {
-    asteroides.length ? setLoading(false) : setLoading(true);
-  }, [asteroides]);
+    asteroids.length ? setLoading(false) : setLoading(true);
+  }, [asteroids]);
 
   const searchAsteroids = async () => {
-    setAsteroides([]);
+    setAsteroids([]);
     apiGet("neo/rest/v1/feed", {
       start_date: showDate,
       end_date: showDate,
     }).then((result) => {
-      setAsteroides(result.data.near_earth_objects[showDate]);
+      setAsteroids(result.data.near_earth_objects[showDate]);
     });
   };
 
@@ -48,11 +50,10 @@ function Asteroides() {
         <div className="card-primary-date">
           <p>Selecione o dia:</p>
           <DatePicker
-            selected={selectedDate}
-            onChange={(date) => setSelectedDate(date)}
-            maxDate={new Date()}
-            dateFormat="dd/MM/yyyy"
-            className="date-datepicker"
+            disabledDate={(d) => !d || d.isAfter(new Date())}
+            defaultValue={moment(selectedDate, "DD/MM/YYYY")}
+            format={["DD/MM/YYYY"]}
+            onChange={(date) => date && setSelectedDate(date._d)}
           />
         </div>
         <div className="card-primary-title">
@@ -64,7 +65,7 @@ function Asteroides() {
         <Loading />
       ) : (
         <div className="card-list">
-          {asteroides.map((infos) => (
+          {asteroids.map((infos) => (
             <div key={infos.id} className="card">
               <div className="card-info">
                 <p className="info-name">Nome:</p>
@@ -115,4 +116,4 @@ function Asteroides() {
   );
 }
 
-export default Asteroides;
+export default Asteroids;
